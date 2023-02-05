@@ -14,14 +14,13 @@
   },
   "auth": {
     "reactapp": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [],
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": [
@@ -31,19 +30,15 @@
             "REQUIRES_UPPERCASE"
           ]
         },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
-        ],
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd7c09ee2fa9a4-staging-02640-deployment/amplify-cfn-templates/auth/reactapp-cloudformation-template.json",
-        "logicalId": "authreactapp"
-      },
-      "lastPushTimeStamp": "2023-02-05T00:34:29.902Z",
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
       "output": {
         "UserPoolId": "us-east-1_FJX5TsDs1",
         "AppClientIDWeb": "3mj7qgog6rp0rjifn68je5j2bd",
@@ -53,7 +48,11 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "reactapp"
       },
-      "lastPushDirHash": "ntBAjp5QM54p6NqTeWDFFHmKxCg="
+      "lastPushTimeStamp": "2023-02-05T00:58:26.694Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd7c09ee2fa9a4-staging-02640-deployment/amplify-cfn-templates/auth/reactapp-cloudformation-template.json",
+        "logicalId": "authreactapp"
+      }
     }
   }
 }

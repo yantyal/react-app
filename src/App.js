@@ -1,6 +1,12 @@
 import { useState, useRef } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
+import '@aws-amplify/ui-react/style.css';
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import aws_exports from './aws-exports';
+
+Amplify.configure(aws_exports);
 
 function App() {
   const [todos, setTodos] = useState([
@@ -41,4 +47,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
