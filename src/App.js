@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import TodoList from "./TodoList";
 import { v4 as uuidv4 } from "uuid";
 import '@aws-amplify/ui-react/styles.css';
-import { Amplify } from 'aws-amplify';
+import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import aws_exports from './aws-exports';
 
@@ -37,7 +37,10 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="App">
+      <header className="App-header">
+      <h2><a className="App-link" href="." onClick={Auth.signOut}>Sign Out</a></h2>
+      </header>
       <TodoList todos={todos} toggleTodo={toggleTodo}/>
       <input type="text" ref={todoNameRef}></input>
       <button onClick={handleAddTodo}>タスクを追加</button>
