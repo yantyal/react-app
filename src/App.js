@@ -66,22 +66,22 @@ const content3 = <p>未実装</p>;
 const content4 = <p>未実装</p>;
 
 function App() {
-  const [content1, setContent1] = useState();
+  // const [content1, setContent1] = useState();
 
-  DataStore.query(Board).then(boards=>{
-    const data = [];
-    for(let board of boards) {
-      data.push(
-        <CommentCard
-        board={board}
-        key={board.id}
-      />
-      )
-    }
-    setContent1(<div>
-      {data}
-    </div>)
-  })
+  // DataStore.query(Board).then(boards=>{
+  //   const data = [];
+  //   for(let board of boards) {
+  //     data.push(
+  //       <CommentCard
+  //       board={board}
+  //       key={board.id}
+  //     />
+  //     )
+  //   }
+  //   setContent1(<div>
+  //     {data}
+  //   </div>)
+  // })
   return (
     <div>
       <div className='py-4'>
