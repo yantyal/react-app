@@ -72,9 +72,8 @@ function App() {
     const data = [];
     for(let board of boards) {
       data.push(
-        <CommentCard
+        <ActivityReport
         board={board}
-        key={board.id}
         />
       )
     }
@@ -119,10 +118,13 @@ function App() {
   )
 }
 
-function ActivityReport() {
+function ActivityReport(board) {
   return (
     <div className='py-2 border-1'>
-      <CommentCard />
+      <CommentCard
+        board={board}
+        key={board.id}
+        />
     </div>
   )
 }
