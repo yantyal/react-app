@@ -52,6 +52,7 @@ type EagerBoard = {
   readonly image?: string | null;
   readonly personID: string;
   readonly name?: string | null;
+  readonly timestamp?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -66,6 +67,7 @@ type LazyBoard = {
   readonly image?: string | null;
   readonly personID: string;
   readonly name?: string | null;
+  readonly timestamp?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
