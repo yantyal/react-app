@@ -58,7 +58,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import { CommentCard, ActivityReportCollection } from './ui-components';
 import { DataStore } from 'aws-amplify';
 import { useState } from 'react';
-import { Board } from './models';
+import { ActivityReport } from './models';
 
 const content1 = <ActivityReportCollection />;
 const content2 = <p>未実装</p>;
@@ -66,22 +66,21 @@ const content3 = <p>未実装</p>;
 const content4 = <p>未実装</p>;
 
 function App() {
-  // const [content1, setContent1] = useState();
+  const [content2, setContent2] = useState();
 
-  // DataStore.query(Board).then(boards=>{
-  //   const data = [];
-  //   for(let board of boards) {
-  //     data.push(
-  //       <CommentCard
-  //       board={board}
-  //       key={board.id}
-  //     />
-  //     )
-  //   }
-  //   setContent1(<div>
-  //     {data}
-  //   </div>)
-  // })
+  DataStore.query(ActivityReport).then(reports=>{
+    const data = [];
+    for(let report of reports) {
+      data.push(
+        <li key={report.id} className='list-group-item'>
+          name:{report.name}, message:{report.message},
+        </li>
+      )
+    }
+    setContent2(<div>
+      {data}
+    </div>)
+  })
   return (
     <div>
       <div className='py-4'>
@@ -119,28 +118,28 @@ function App() {
   )
 }
 
-function ActivityReport(board) {
-  return (
-    <div className='py-2 border-1'>
-      <CommentCard
-        board={board}
-        key={board.id}
-      />
-    </div>
-  )
-}
+// function ActivityReport(board) {
+//   return (
+//     <div className='py-2 border-1'>
+//       <CommentCard
+//         board={board}
+//         key={board.id}
+//       />
+//     </div>
+//   )
+// }
 
-function ActivityReports() {
-  return (
-    <div>
-      <div className='py-4'>
-        <p>家庭訪問や清掃活動などの活動報告はこちら</p>
-      </div>
-      <ActivityReport />
-      <ActivityReport />
-      <ActivityReport />
-    </div>
-  )
-}
+// function ActivityReports() {
+//   return (
+//     <div>
+//       <div className='py-4'>
+//         <p>家庭訪問や清掃活動などの活動報告はこちら</p>
+//       </div>
+//       <ActivityReport />
+//       <ActivityReport />
+//       <ActivityReport />
+//     </div>
+//   )
+// }
 
 export default withAuthenticator(App);
