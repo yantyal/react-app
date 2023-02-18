@@ -72,9 +72,10 @@ function App() {
     const data = [];
     for(let board of boards) {
       data.push(
-        <ActivityReport
+        <CommentCard
         board={board}
-        />
+        key={board.id}
+      />
       )
     }
     setContent1(<div>
@@ -124,7 +125,7 @@ function ActivityReport(board) {
       <CommentCard
         board={board}
         key={board.id}
-        />
+      />
     </div>
   )
 }
