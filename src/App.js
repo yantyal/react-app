@@ -55,12 +55,12 @@
 import './App.css';
 import '@aws-amplify/ui-react/styles.css';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-import { CommentCard } from './ui-components';
+import { CommentCard, ActivityReportCollection } from './ui-components';
 import { DataStore } from 'aws-amplify';
 import { useState } from 'react';
 import { Board } from './models';
 
-const content1 = <ActivityReports />;
+const content1 = <ActivityReportCollection />;
 const content2 = <p>未実装</p>;
 const content3 = <p>未実装</p>;
 const content4 = <p>未実装</p>;

@@ -36,12 +36,12 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2023-02-18T02:48:51.368Z",
+      "lastPushTimeStamp": "2023-02-18T05:06:54.026Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd7c09ee2fa9a4-staging-02640-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apireactapp"
       },
-      "lastPushDirHash": "vXSrl3Wn+P3KmsaQ5UcJfQqboQw="
+      "lastPushDirHash": "BqbX1vq3NVJKeEGAWqtKyWB/l8w="
     }
   },
   "auth": {
@@ -80,7 +80,7 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "reactapp"
       },
-      "lastPushTimeStamp": "2023-02-18T02:48:51.373Z",
+      "lastPushTimeStamp": "2023-02-18T05:06:54.032Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyd7c09ee2fa9a4-staging-02640-deployment/amplify-cfn-templates/auth/reactapp-cloudformation-template.json",
         "logicalId": "authreactapp"

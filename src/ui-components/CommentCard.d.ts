@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { ActivityReport } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { MyIconProps } from "./MyIcon";
 import { FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
@@ -39,6 +40,8 @@ export declare type CommentCardOverridesProps = {
     MyIcon29766898?: MyIconProps;
 } & EscapeHatchProps;
 export declare type CommentCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    activityReport?: ActivityReport;
+} & {
     overrides?: CommentCardOverridesProps | undefined | null;
 }>;
 export default function CommentCard(props: CommentCardProps): React.ReactElement;

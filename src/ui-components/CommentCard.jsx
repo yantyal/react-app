@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import MyIcon from "./MyIcon";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CommentCard(props) {
-  const { overrides, ...rest } = props;
+  const { activityReport, overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -172,7 +172,7 @@ export default function CommentCard(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Author"
+                children={activityReport?.name}
                 {...getOverrideProps(overrides, "Author")}
               ></Text>
               <Text
@@ -194,7 +194,7 @@ export default function CommentCard(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Timestamp"
+                children={activityReport?.updatedAt}
                 {...getOverrideProps(overrides, "Timestamp")}
               ></Text>
               <Text
@@ -216,7 +216,7 @@ export default function CommentCard(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Lorem ipsum"
+                children={activityReport?.location}
                 {...getOverrideProps(overrides, "Lorem ipsum")}
               ></Text>
             </Flex>
@@ -270,7 +270,7 @@ export default function CommentCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="“Lorem ipsum dolor sit amet, consectetur adipiscing elit. ”"
+            children={activityReport?.message}
             {...getOverrideProps(
               overrides,
               "\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit. \u201D"

@@ -6,6 +6,40 @@ import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/
 
 
 
+type EagerActivityReport = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<ActivityReport, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly name?: string | null;
+  readonly message?: string | null;
+  readonly location?: string | null;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyActivityReport = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<ActivityReport, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly name?: string | null;
+  readonly message?: string | null;
+  readonly location?: string | null;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type ActivityReport = LazyLoading extends LazyLoadingDisabled ? EagerActivityReport : LazyActivityReport
+
+export declare const ActivityReport: (new (init: ModelInit<ActivityReport>) => ActivityReport) & {
+  copyOf(source: ActivityReport, mutator: (draft: MutableModel<ActivityReport>) => MutableModel<ActivityReport> | void): ActivityReport;
+}
+
 type EagerPerson = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<Person, 'id'>;

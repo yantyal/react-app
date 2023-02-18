@@ -1,3 +1,11 @@
+type ActivityReport @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String
+  message: String
+  location: String
+  image: String
+}
+
 type Person @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String
